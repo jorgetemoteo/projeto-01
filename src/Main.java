@@ -31,17 +31,18 @@ public class Main {
                     else if (saldo >= variante){
                         saldo = saldo - variante;
                         System.out.println("Operação realizada com sucesso!");
+                        System.out.println("Seu novo saldo: " +NumberFormat.getCurrencyInstance().format(saldo));
                     }
-                System.out.println("O seu saldo atual é" +NumberFormat.getCurrencyInstance().format(saldo));
+
             } else if (opcao == 3) {
                 System.out.println("Digite o valor recebido:");
                 Scanner valorReceber = new Scanner(System.in);
                 variante = valorReceber.nextDouble();
                 saldo = saldo + variante;
-                System.out.println("Valor recebido com sucesso!\nSeu novo saldo:" +NumberFormat.getCurrencyInstance().format(saldo));
+                System.out.println("Valor recebido com sucesso!\nSeu novo saldo: " +NumberFormat.getCurrencyInstance().format(saldo));
             } else if (opcao == 4) {
                 System.out.println("Volte sempre!");
-            } else if (opcao >= 4) {
+            } else if (opcao > 4) {
                 System.out.println("Opção Invalida");
             } else if (opcao <= 0) {
                 System.out.println("Opção Invalida");
